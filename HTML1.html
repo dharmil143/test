@@ -1,0 +1,80 @@
+<html>
+<title>HTML 1</title>
+<style>
+body{
+
+    margin: 10;
+    background-image: url("https://cutewallpaper.org/21/copyright-free-wallpapers/No-Copyright-Backgrounds-Non-Copyrighted-Images-Hd-Free-.png");
+    background-image: no-repeat;
+    font-size: 16px;
+}
+.center{
+    position: absolute;
+    text-align:relative;
+}
+h2{
+    text-align:center;
+}
+input{
+    text-align: center;
+}
+button{
+width:15%;
+height:25px;
+border: 1px solid;
+font-size: 15px;
+border-radius:10px;
+}
+button:hover{
+    color:#50838A;
+}
+</style>
+<body >
+<div class="center">
+<h2>Vidyalankar Student SignUp Form</h2>
+First Name : <input type="name" id="FN" name="first name" required>
+Last Name : <input type="name" id="LN" name="last name" required>
+<br><br>
+Email : <input type="name" id="Email" name="email" disable>
+<br><br>
+Academic Year:
+<br>
+<input type="radio" id="FE" name="Year" value="FE"><label for="FE">First Year</label>
+<br>
+<input type="radio" id="SE" name="Year" value="SE"><label for="SE">Second Year</label>
+<br>
+<input type="radio" id="TE" name="Year" value="TE"><label for="TE">Third Year</label>
+<br>
+<input type="radio" id="BE" name="Year" value="BE"><label for="BE">Fourth Year</label>
+<br><br>
+Country : <input type="text" value="India" readonly disable>
+<br><br>
+Date of Birth : <input type="date" required>
+<br><br>
+Contact Number : <input type="text" id="num" placeholder="Enter Contact Number" pattern="[0-9]{10}" required >
+<br><br>
+<button onclick="validateform()">Submit</button>
+<p id="demo"></p>
+</div>
+<script>
+function validateform(){  
+let firstname = document.getElementById("FN").value;  
+let lastname =  document.getElementById("LN").value;  
+let number =  document.getElementById("num").value; 
+if (firstname==null || firstname==""){  
+  alert("First Name Cant Be Blank");  
+  return false;
+}
+if (lastname==null || lastname==""){  
+  alert("Last name can't be blank"); 
+  return false;  
+} 
+if (isNaN(num))
+{
+    alert("Enter a Valid number");
+    return false;
+}
+} 
+</script>
+</body>
+</html>
